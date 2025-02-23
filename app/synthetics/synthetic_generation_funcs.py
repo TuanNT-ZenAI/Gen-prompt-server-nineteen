@@ -155,19 +155,20 @@ async def generate_text_to_image_synthetic(
     # TODO: Fix to be our allowed seeds for the relay mining solution
     seed = random.randint(1, scst.MAX_SEED)
 
+    height, width = sutils.get_text_to_image_resolution()
     if model == Task.proteus_text_to_image.value:
-        height = 1024
-        width = 1024
+        # height = 1024
+        # width = 1024
         cfg_scale = 4.0
         steps = 8
     elif model == Task.dreamshaper_text_to_image.value:
-        height = 1024
-        width = 1024
+        # height = 1024
+        # width = 1024
         cfg_scale = 3.0
         steps = 8
     elif model == Task.flux_schnell_text_to_image.value:
-        height = 1024
-        width = 1024
+        # height = 1024
+        # width = 1024
         cfg_scale = 3.0
         steps = 5
     else:

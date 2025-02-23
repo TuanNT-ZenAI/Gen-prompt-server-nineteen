@@ -138,6 +138,9 @@ def generate_mask_with_circle(image_b64: str) -> str:
 
     return mask_b64
 
+def get_text_to_image_resolution() -> tuple[int, int]:
+    return random.choice([(512, 512), (1024, 1024), (1024, 512), (512, 1024)])
+
 
 # def construct_synthetic_data_task_key(task: str) -> str:
 #     return rcst.SYNTHETIC_DATA_KEY + ":" + task
